@@ -1,2 +1,11 @@
-# BACKENDUE
-Description (optional)
+# pstrade
+
+## Project setup
+```
+npm install
+```
+
+### To run app
+```
+npm start
+```
