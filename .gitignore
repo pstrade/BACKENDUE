@@ -1,0 +1,14 @@
+*sublime*
+.vs_code
+.DS_Store
+.idea
+
+*.log
+*.lock
+*-lock.json
+proxy/*-lock.json
+
+dist
+coverage
+node_modules
+.env
