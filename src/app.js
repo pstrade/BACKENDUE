@@ -3,9 +3,11 @@ import express from 'express';
 import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
 import { router } from './routes';
+import { passport } from './controllers/authentication';
 
 const app = express();
 
+mongoose.set('useCreateIndex', true);
 mongoose.connect(process.env.CONNECTION_STRING, { useNewUrlParser: true });
 
 app.use((req, res, next) => {
@@ -18,6 +20,7 @@ app.options('*', (req, res) => res.end());
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(passport.initialize());
 
 app.use('/', router);
 
