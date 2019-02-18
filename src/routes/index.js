@@ -1,3 +1,9 @@
-import express from 'express';
+import { Router } from 'express';
+import { authenticationRouter } from './authentication';
+import { errorHandler } from './errorHandler';
 
-export const router = express.Router();
+export const router = Router();
+
+router.use('/auth', authenticationRouter);
+
+router.use(errorHandler);
