@@ -5,9 +5,6 @@
 build
 
 *.log
-*.lock
-*-lock.json
-proxy/*-lock.json
 
 dist
 coverage
